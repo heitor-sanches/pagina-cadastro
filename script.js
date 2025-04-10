@@ -18,7 +18,7 @@ document.getElementById('cadastroForm').addEventListener('submit', async functio
 
     // Consultar se CPF já existe no MongoDB Atlas
     try {
-        const checkResponse = await fetch('https://SEU_BACKEND_URL/api/check-cpf', {
+        const checkResponse = await fetch('https://cadastro-cpf-backend.onrender.com', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -32,7 +32,7 @@ document.getElementById('cadastroForm').addEventListener('submit', async functio
             mensagem.innerText = "CPF já cadastrado!";
         } else {
             // Inserir no banco
-            const insertResponse = await fetch('https://SEU_BACKEND_URL/api/insert-cpf', {
+            const insertResponse = await fetch('https://cadastro-cpf-backend.onrender.com, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
